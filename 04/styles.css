@@ -1,0 +1,43 @@
+
+html {
+	opacity: 0.8; /* прозрачность элемента */
+	background-color: gray;
+	color: green;
+	/*background-image: url(tractor.png);*/
+	padding: 10%;
+}
+body {
+	padding: 50px 50px;
+	background-color: rgba(255,255,0,0.2);
+}
+h1 {
+	z-index: -1;
+
+}
+a {
+	color: black;
+}
+a:visited {
+	color: gray;
+}
+a:hover {
+	color: red;
+}
+span a {
+	font-weight: bold;
+	color: white;
+	
+}
+h3 {
+	color: #FF00FF;
+}
+.main {
+	color: blue;
+}
+.main .cl2 h3 {
+	color: #555555;
+}
+
+.main .cl2 {
+	color: #555555;
+}
