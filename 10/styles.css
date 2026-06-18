@@ -1,91 +1,144 @@
-/* сброс стилей браузера */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+/* ===== НОВОЕ ОФОРМЛЕНИЕ (добавлено поверх учебника) ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-	line-height: 1.2;
+  font: 62.5% 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #1a2a3a, #0b1a2a);
+  min-height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-ol { 
-	padding-left: 1.4em;
-	list-style: decimal;
-}
-ul {
-	padding-left: 1.4em;
-	list-style: square;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} 
-/* конец кода сброса стилей браузера */
-
-body {
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	
-}
-
 header {
-	background: rgb(255,214,94); 
-	background: linear-gradient(to bottom, rgb(100,100,100),rgb(0,0,0));  
-  padding-top: 20px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1);
+  max-width: 960px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
 }
 .container {
-	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
-	padding: 10px 0 30px 0;	
-	text-align: right;
-	position: relative;
+  padding: 40px 45px 30px;
+  position: relative;
 }
-
 .logo {
-	position: absolute;
-	z-index: 100;
-	left: 0;	
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(0,180,255,0.2);
 }
-header h1 {
-	font-size: 2.2em;
-	margin: 0 0 10px 0;
-	color: rgb(255,255,255);
+h1 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 3.2em;
+  font-weight: 700;
+  background: linear-gradient(to right, #f7f9fc, #a0c4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-left: 18px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
-
 nav {
-	margin-left: 200px;	
+  margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 20px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+nav ul li {
+  /* нет дополнительных стилей */
 }
 
-nav li {
-	display: inline;
-}
-
+/* Стили для кнопок навигации (новый дизайн) – базовые, без transition */
 nav a {
-	display: inline-block;
-	text-decoration: none;
-	font-size: 1.2em;
-	color: #ffffff;
-	padding: 10px 20px;
-	background: #ff932d;
-	border-radius: 5px;
-	border: 1px solid #c95e00;
-	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.7);
-	text-shadow:
-		0px -1px 1px rgba(000,000,000,0.2),
-		0px 1px 0px rgba(255,255,255,0.3);
+  display: inline-block;
+  padding: 12px 30px;
+  background: rgba(255,255,255,0.06);
+  color: #e0e8f0;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  letter-spacing: 0.5px;
 }
 
-/* пользовательские стили  */
+/* ===== СТИЛИ ИЗ УЧЕБНИКА (строго по шагам практикума) ===== */
+/* Ниже – все правила, добавленные в практикуме, без изменений */
 
+/* Шаг 2: масштабирование при наведении */
+nav a:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
 
+/* Шаг 4: простой переход (заменяется на шаге 6) */
+nav a {
+  transition: all .5s;
+}
 
+/* Шаг 5: красный фон при наведении */
+nav a:hover {
+  background-color: red;
+}
 
+/* Шаг 6: раздельные переходы (заменяет transition: all) */
+nav a {
+  -webkit-transition: -webkit-transform .5s,
+                      background-color 1s ease-in .5s;
+  transition: transform .5s,
+              background-color 1s ease-in .5s;
+}
 
+/* Шаг 1, 4, 6: ключевые кадры (с префиксом -webkit-) */
+@-webkit-keyframes logo {
+  from {
+    -webkit-transform: rotate(0) scale(.5);
+    left: 120%;
+  }
+  50% {
+    -webkit-transform: rotate(-720deg) scale(.5);
+    left: 0;
+  }
+  to {
+    -webkit-transform: rotate(0) scale(1);
+  }
+}
 
+/* Шаг 9: ключевые кадры (без префикса) */
+@keyframes logo {
+  from {
+    transform: rotate(0) scale(.5);
+    left: 120%;
+  }
+  50% {
+    transform: rotate(-720deg) scale(.5);
+    left: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+  }
+}
 
+/* Шаг 2, 8, 10: применение анимации к логотипу */
+.logo {
+  -webkit-animation: logo 3s;
+  animation: logo 3s;
+  /* Для работы анимации с left нужно позиционирование */
+  position: relative;
+}
