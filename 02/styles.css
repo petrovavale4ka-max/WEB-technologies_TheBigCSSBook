@@ -1,3 +1,84 @@
-p { color: black; font-size: 1.5em;
-	
+/* ===== Стиль для элемента html ===== */
+html {
+    padding-top: 25px;
+    background-image: url(images/bg_page.png);  /* фоновое изображение */
+}
+
+/* ===== Стиль для body – центрированный блок ===== */
+body {
+    width: 80%;
+    max-width: 1200px;          /* ограничение ширины на больших экранах */
+    padding: 20px 30px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #FAF0E6;  /* тёплый бежевый фон */
+}
+
+/* ===== Заголовок h1 ===== */
+h1 {
+    font-family: 'Kurale', 'Arial Black', serif;
+    font-weight: normal;
+    color: #8B4513;             /* коричневый */
+    font-size: 3.2em;
+    margin: 0 0 10px 0;
+    border-bottom: 4px double #8B4513;
+    padding-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ===== Заголовки h2 (общий стиль) ===== */
+h2 {
+    color: #2F4F4F;             /* тёмный серо-зелёный */
+    font-family: 'Kurale', 'Arial Black', serif;
+    font-weight: normal;
+    font-size: 2.4em;
+    border-bottom: 2px solid #D2B48C;
+    background: url(images/head-icon.png) no-repeat 10px center;
+    padding: 5px 0 5px 60px;
+    margin: 30px 0 0 0;
+    clear: both;
+}
+
+/* ===== Специальный класс для h2 – меняем цвет и иконку ===== */
+h2.special {
+    color: #800000;             /* тёмно-бордовый */
+    background-image: url(images/head-icon.png); /* можно указать другую иконку */
+    background-position: 10px 50%;
+}
+
+/* ===== Групповой селектор для абзацев и адреса ===== */
+p, address {
+    font-family: 'Palatino Linotype', Baskerville, serif;
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.7;
+    margin-top: 15px;
+    margin-left: 60px;
+}
+
+/* ===== Класс .intro – первый абзац с особым оформлением ===== */
+.intro {
+    font-family: 'Kurale', Helvetica, sans-serif;
+    font-size: 1.3em;
+    color: #4A4A4A;
+    margin-left: 0;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    background-color: #FFF8DC;
+    border-left: 6px solid #8B4513;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===== Стиль для элемента с идентификатором #footer ===== */
+#footer {
+    font-size: 1em;
+    color: #666;
+    margin-top: 40px;
+    margin-left: 0;
+    padding-top: 10px;
+    border-top: 1px solid #D2B48C;
+    text-align: center;
+    background: none;   /* убираем фон, если был унаследован */
 }
