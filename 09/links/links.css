@@ -1,0 +1,70 @@
+/* ---------- Общие стили для ссылок ---------- */
+a {
+  color: #1a8c8c;                  /* бирюзовый вместо синего */
+  text-decoration: none;
+  font-weight: 600;                /* чуть жирнее */
+  border-bottom: 3px solid #f39c12; /* оранжевая, толще */
+  transition: all 0.25s ease;      /* плавные переходы */
+}
+
+/* ---------- Посещённые ссылки ---------- */
+a:visited {
+  color: #7f8c8d;                  /* серый, менее заметный */
+}
+
+/* ---------- При наведении ---------- */
+a:hover {
+  color: #fff;
+  background-color: #e67e22;       /* тёмно-оранжевый фон */
+  border-bottom-color: #fff;       /* белая подчёркивание */
+  transform: scale(1.02);          /* лёгкое увеличение */
+}
+
+/* ---------- Ссылки на email – с иконкой слева ---------- */
+a[href^="mailto:"] {
+  color: #c0392b;                  /* красный для привлечения внимания */
+  border: none;
+  background: url(images/email.gif) no-repeat left center;
+  padding-left: 28px;              /* чуть больше места для иконки */
+  margin-left: 8px;
+  background-size: 20px 20px;      /* явно задаём размер иконки */
+}
+
+/* ---------- Блок ресурсов – убираем подчёркивание, иконки слева ---------- */
+.resources a {
+  border-bottom: none;
+  padding-left: 28px;              /* иконки будут слева */
+  padding-right: 0;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+/* Внешние ссылки – глобус слева */
+.resources a[href*='://'] {
+  background-image: url(images/globe.png);
+}
+
+/* PDF */
+.resources a[href$='.pdf'] {
+  background-image: url(images/acrobat.png);
+}
+
+/* ZIP */
+.resources a[href$='.zip'] {
+  background-image: url(images/zip.png);
+}
+
+/* DOC */
+.resources a[href$='.doc'] {
+  background-image: url(images/word.png);
+}
+
+/* При наведении в блоке ресурсов – другой цвет фона и тень */
+.resources a:hover {
+  color: #2c3e50;
+  background-color: #fdebd0;
+  transform: scale(1.02);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 4px;
+}ы

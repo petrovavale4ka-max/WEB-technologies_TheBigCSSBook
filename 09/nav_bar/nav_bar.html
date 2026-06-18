@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>CosmoFarmer</title>
+<title>CosmoFarmer – Горизонтальная навигация (обновлённый стиль)</title>
 <style>
-/* сброс стилей браузера */
+/* ---------- сброс стилей браузера ---------- */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
@@ -33,26 +33,102 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 } 
-/* конец кода сброса стилей браузера */
+/* ---------- конец сброса ---------- */
 
-/* БАЗОВЫЙ */
+/* ---------- Базовый стиль страницы ---------- */
 body {
-	font: 62.5% Verdana, Arial, Helvetica, sans-serif;
-	padding: 20px;
+	font: 62.5% 'Segoe UI', Verdana, Arial, sans-serif;
+	padding: 30px 20px;
+	background: #f4f7fa; /* лёгкий фон для контраста */
 }
 
+/* ---------- ОБНОВЛЁННАЯ ГОРИЗОНТАЛЬНАЯ ПАНЕЛЬ ---------- */
+/* Убираем отступы и маркеры у списка */
+.mainNav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;             /* вместо float – современный способ */
+	flex-wrap: wrap;           /* на случай переноса */
+	gap: 6px;                  /* промежуток между кнопками */
+	background: transparent;
+}
 
+/* Каждый пункт списка – без float, ширина автоматическая */
+.mainNav li {
+	/* float и width не нужны при flex */
+	flex: 0 0 auto;            /* не растягивается */
+}
 
+/* Стиль ссылок – кнопки без границ, с градиентом и скруглением */
+.mainNav a {
+	display: block;
+	color: #2c3e50;
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 12px 24px;
+	background: linear-gradient(to bottom, #ffffff, #e9edf2);
+	border-radius: 30px;          /* скруглённые кнопки */
+	box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+	transition: all 0.25s ease;
+	letter-spacing: 0.5px;
+}
+
+/* Эффект при наведении – тёмный фон, белый текст, подъём */
+.mainNav a:hover {
+	background: #2c3e50;
+	color: #fff;
+	box-shadow: 0 6px 14px rgba(44, 62, 80, 0.3);
+	transform: translateY(-2px);
+}
+
+/* Активная (текущая) ссылка – яркий акцентный цвет, без иконок */
+.home .homeLink,
+.feature .featureLink,
+.expert .expertLink,
+.quiz .quizLink,
+.project .projectLink,
+.horoscope .horoscopeLink {
+	background: #1abc9c;           /* бирюзовый */
+	color: #fff;
+	box-shadow: 0 4px 12px rgba(26, 188, 156, 0.4);
+	font-weight: 700;
+	/* убираем лишние отступы, которые были для иконок */
+	padding: 12px 24px;
+	background-image: none;       /* если использовались изображения, отключаем */
+}
+
+/* Дополнительно: при наведении на активную кнопку – усиление тени, без изменения цвета */
+.home .homeLink:hover,
+.feature .featureLink:hover,
+.expert .expertLink:hover,
+.quiz .quizLink:hover,
+.project .projectLink:hover,
+.horoscope .horoscopeLink:hover {
+	background: #16a085;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(26, 188, 156, 0.5);
+}
+
+/* Если хотите использовать иконки – можно добавить спрайт или псевдоэлементы,
+   но в данном дизайне они не требуются. */
 </style>
 </head>
-<body>
-  <ul>
-    <li><a href="/index.html">Главная</a></li>
-    <li><a href="/features/">Сенсации</a></li>
-    <li><a href="/experts/">Экспертизы</a></li>
-    <li><a href="/quiz/">Мистификации</a></li>
-    <li><a href="/projects/">Проекты</a></li>
-    <li><a href="/horoscopes/">Гороскопы</a></li>
+
+<!-- Текущая страница – Главная (для демонстрации выделения) -->
+<body class="home">
+
+  <!-- Список навигации с классом mainNav -->
+  <ul class="mainNav">
+    <li><a href="/index.html" class="homeLink">Главная</a></li>
+    <li><a href="/features/" class="featureLink">Сенсации</a></li>
+    <li><a href="/experts/" class="expertLink">Экспертизы</a></li>
+    <li><a href="/quiz/" class="quizLink">Мистификации</a></li>
+    <li><a href="/projects/" class="projectLink">Проекты</a></li>
+    <li><a href="/horoscopes/" class="horoscopeLink">Гороскопы</a></li>
   </ul>
+
 </body>
 </html>
