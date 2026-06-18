@@ -1,103 +1,138 @@
-/* сброс стилей браузера */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+/* ---------- Базовые стили (из исходного файла) ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-	line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  background: #fff;
+  margin-bottom: 40px; /* отступ вниз 20 пикселей */
 }
-ol { 
-	padding-left: 1.4em;
-	list-style: decimal;
+.wrapper {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fff;
+}
+.main {
+  float: left;
+  width: 68%;
+  margin-right: 4%;
+}
+.announcement {
+  float: left;
+  width: 28%;
+}
+.copyright {
+  clear: both;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.8em;
+  color: #777;
+}
+h1, h2, p, ul {
+  margin: 0 0 0.5em 0;
 }
 ul {
-	padding-left: 1.4em;
-	list-style: square;
+  padding-left: 20px;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} 
-/* конец кода сброса стилей браузера */
 
+/* ===== НОВОЕ ОФОРМЛЕНИЕ (добавлено поверх теории) ===== */
+
+/* 1. Фон страницы – тёмный градиент (вместо светлого) */
+html {
+  background-image: linear-gradient(to bottom, #1a2a3a, #0b0e1a 700px);
+  height: 100%;
+}
+
+/* 2. Контейнер .wrapper – яркий, с тенью, рамкой и скруглением */
 .wrapper {
-	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
-    overflow: hidden; /* выравнивание */
+  background-color: #fcf9f2;
+  background-image: url(images/bg_main.jpg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  border-radius: 28px 28px 20px 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 215, 0, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  padding: 20px 30px 30px;
 }
 
-.main {
-	float: right;
-	width: 565px;
-	margin-right: 15px;
-	padding-top: 25px;
-}
-
-.announcement {
-	margin-right: 600px;
-	margin-left: 20px;
-	
-}
-
-.copyright {
-	clear: both;
-	font: bold 12px Tahoma, Geneva, sans-serif;
-	color: #65747E;
-	padding: 5px;
-  margin: 0 15px;
-	border: 1px dotted #98AFBE;
-  border-left: none;
-  border-right: none;
-}
-
-
+/* 3. Заголовки – яркие, с тенью */
 .banner h1 {
-	font: normal 48px Georgia, "Times New Roman", Times, serif;
-	text-align: right;
-  color: #272D32;
+  font-size: 2.8em;
+  color: #f5a623;
+  text-shadow: 0 2px 8px rgba(245, 166, 35, 0.4);
+  letter-spacing: -0.5px;
+  margin-top: 20px;
+  text-align: right;
+  margin-bottom: 20px; /* отступ вниз 20 пикселей */
 }
 
 .main h2 {
-	font: 24px Tahoma, Geneva, sans-serif;
-	margin-bottom: 15px;
-	font-family: Tahoma, Geneva, sans-serif;
+  background-image: url(images/underline.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 10px;
+  font-size: 1.8em;
+  color: #d35400;
+  text-shadow: 0 1px 4px rgba(211, 84, 0, 0.2);
+  margin-top: 80px;    
 }
+
+/* 4. Абзацы – более тёмный цвет для читаемости */
 .main p {
-	font: 14px Tahoma, Geneva, sans-serif;
-	color: #323A3F;
-	margin-bottom: 20px;
-	font-family: Tahoma, Geneva, sans-serif;
+  color: #2c3e50;
+  line-height: 1.6;
 }
 
+/* 5. Боковая панель – изменён порядок изображений: bottom, middle, top */
+.announcement {
+  background: url(images/scroll_bottom.jpg) no-repeat center top,
+              url(images/scroll_middle.jpg) repeat-y center top,
+              url(images/scroll_top.jpg) no-repeat center bottom;
+  padding: 70px 0 60px 0;
+  margin-top: 115px;
+  border-radius: 20px 20px 12px 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Заголовок боковой панели */
 .announcement h2 {
-	font: italic bold normal 20px Georgia, "Times New Roman", Times, serif;
-	text-align: center;
-	color: #323A3F;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	margin-bottom: 18px;
-}
-.announcement ul {
-	font: 14px Tahoma, Geneva, sans-serif;
+  text-align: center;
+  color: #bf360c;
+  font-size: 1.6em;
+  text-shadow: 0 1px 4px rgba(191, 54, 12, 0.2);
 }
 
-/* пользовательские стили  */
+/* 6. Маркеры списка – цветные, с тенью */
+.announcement li {
+  list-style: none;
+  background-image: url(images/bullet.png);
+  background-repeat: no-repeat;
+  background-position: 0 4px;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 40px;
+  color: #1a1a1a;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+.announcement li:hover {
+  transform: translateX(4px);
+}
 
-
-
-
-
-
-
-
-
+/* 7. Копирайт – стилизован */
+.copyright {
+  border-top: 2px solid #e0d6c8;
+  padding-top: 15px;
+  margin-top: 30px;
+  color: #7f8c8d;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
