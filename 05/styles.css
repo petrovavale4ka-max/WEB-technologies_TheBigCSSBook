@@ -1,43 +1,132 @@
-/* сброс стилей браузера */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+/* ---------- Сброс стандартных стилей ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
-	line-height: 1.2;
+  font-family: "Open Sans", "Palatino Linotype", serif;
+  font-size: 100%;
 }
-ol { 
-	padding-left: 1.4em;
-	list-style: decimal;
-}
-ul {
-	padding-left: 1.4em
-	list-style: square;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} 
-/* конец кода сброса стилей браузера */
 
-/* простой двухколончный макет  */
+/* ---------- Основные стили (новая гамма) ---------- */
+
+/* Стиль body – градиентный фон, без картинок */
+body {
+  color: #3D2B1F;               /* тёмно-коричневый */
+  font-family: "Open Sans", "Palatino Linotype", serif;
+  padding-top: 80px;
+  background: linear-gradient(145deg, #FFF3E0 0%, #FFE0B2 100%);
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Заголовок h1 – контрастный, с тенью */
+h1 {
+  font-size: 3.2em;
+  font-family: "Open Sans", "Arial Black", sans-serif;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #E65100;              /* яркий оранжевый */
+  text-shadow: 2px 2px 0 #FFCC80;
+  letter-spacing: 1px;
+}
+
+/* Общий стиль h2 – мягкий бирюзовый */
+h2 {
+  font-size: 2em;
+  color: #00796B;              /* тёмный бирюзовый */
+  margin-bottom: 8px;
+  font-weight: 600;
+  border-bottom: 2px dashed #B2DFDB;
+  padding-bottom: 4px;
+}
+
+/* Специфичный стиль для h2 в основной колонке */
+.main h2 {
+  color: #BF360C;              /* тёмно-красный/оранжевый */
+  border-bottom: 3px solid #FFAB91;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23FF6F00"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>') no-repeat left center;
+  background-size: 28px 28px;
+  padding: 0 0 6px 40px;
+}
+
+/* Абзацы в основной колонке – тёмно-серый, чёткий */
+.main p {
+  color: #4E342E;
+  font-family: "Open Sans", "Palatino Linotype", serif;
+  font-size: 1.05em;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  margin-left: 40px;
+}
+
+/* Первый абзац (intro) – яркий, без отступа, другой шрифт */
+p.intro {
+  color: #00695C;              /* насыщенный зелёный */
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-left: 0;
+  margin-bottom: 20px;
+  background: #E0F2F1;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border-left: 6px solid #00897B;
+}
+
+/* ---------- Стили для колонок (обновлённые) ---------- */
 .main {
-	float: left;
-	width: 70%;
-}
-.sidebar {
-	margin-left: 75%;
-	padding: 15px;
-	background: #E9F5FE;
+  float: left;
+  width: 68%;
+  padding-right: 25px;
 }
 
+.sidebar {
+  float: left;
+  width: 32%;
+  background: linear-gradient(135deg, #FFECB3, #FFE0B2);
+  padding: 20px 18px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px #FFCC80, 0 4px 12px rgba(0,0,0,0.08);
+  color: #3E2723;
+}
+
+.sidebar h2 {
+  color: #E65100;
+  border-bottom: 3px solid #FFB74D;
+  padding-bottom: 8px;
+  font-size: 1.7em;
+  background: none;          /* убираем фоновый рисунок из общего h2 */
+  padding-left: 0;
+}
+
+.sidebar p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #4E342E;
+  margin-bottom: 12px;
+}
+
+/* Очистка потока после колонок */
+body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 700px) {
+  .main, .sidebar {
+    float: none;
+    width: 100%;
+  }
+}
