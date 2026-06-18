@@ -1,43 +1,21 @@
+/* Подключаемый шрифт Google – можно оставить или заменить */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-html {
-	opacity: 0.8; /* прозрачность элемента */
-	background-color: gray;
-	color: green;
-	/*background-image: url(tractor.png);*/
-	padding: 10%;
-}
-body {
-	padding: 50px 50px;
-	background-color: rgba(255,255,0,0.2);
-}
-h1 {
-	z-index: -1;
-
-}
-a {
-	color: black;
-}
-a:visited {
-	color: gray;
-}
-a:hover {
-	color: red;
-}
-span a {
-	font-weight: bold;
-	color: white;
-	
-}
-h3 {
-	color: #FF00FF;
-}
-.main {
-	color: blue;
-}
-.main .cl2 h3 {
-	color: #555555;
+/* Стиль для абзацев (часть 1 и 3 практикума) */
+p {
+  color: rgb(30, 120, 80);               /* тёмно-зелёный */
+  padding-left: 20px;
+  border-left: solid 25px rgba(255, 200, 100, .6); /* полупрозрачный оранжевый */
 }
 
-.main .cl2 {
-	color: #555555;
+/* Класс для всей страницы (часть 2) */
+.content {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: rgb(210, 100, 30);              /* оранжевый для заголовков и списков */
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgb(245, 245, 220);  /* кремовый фон */
+  padding: 20px;
+  border-radius: 10px;
 }
