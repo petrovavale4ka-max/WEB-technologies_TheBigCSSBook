@@ -1,34 +1,257 @@
 /* запросы mobile first */
 /* стили для любой ширины */
 
+/* Шапка с фоновым изображением */
+.header {
+  padding: 30px 0 20px 0;
+  background-image: url(../imgs/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 4px solid #33C3F0;
+}
 
-/* стили для ширины крупнее мобильных */
+/* Логотип */
+.logo {
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+  padding: 8px 18px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Навигация */
+.nav {
+  text-align: right;
+  padding-top: 5px;
+}
+
+.nav .button {
+  background-color: rgba(255,255,255,0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  margin: 2px 0;
+}
+
+.nav .button:hover {
+  background-color: rgba(255,255,255,0.35);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.nav .button-primary {
+  background-color: #33C3F0;
+  border-color: #33C3F0;
+  color: #ffffff;
+}
+
+.nav .button-primary:hover {
+  background-color: #1EAEDB;
+  border-color: #1EAEDB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(51,195,240,0.4);
+}
+
+/* Область действия (action) */
+.action {
+  text-align: center;
+  padding-top: 37px;
+  padding-bottom: 20px;
+}
+
+.action h1 {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.action h2 {
+  margin: 0 0 20px 0;
+  color: rgba(255,255,255,0.85);
+  font-weight: 300;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.action .button-primary {
+  background-color: #33C3F0;
+  border-color: #33C3F0;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 0 40px;
+  height: 44px;
+  line-height: 44px;
+  transition: all 0.3s ease;
+}
+
+.action .button-primary:hover {
+  background-color: #1EAEDB;
+  border-color: #1EAEDB;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(51,195,240,0.4);
+}
+
+/* Заголовки */
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1a365d;
+}
+
+/* Контентные колонки */
+.container .row h2 {
+  color: #1a365d;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #33C3F0;
+  padding-bottom: 10px;
+}
+
+.four.columns p {
+  color: #4a5568;
+  line-height: 1.7;
+  font-size: 1.4rem;
+}
+
+.four.columns .button {
+  background-color: #33C3F0;
+  border-color: #33C3F0;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.four.columns .button:hover {
+  background-color: #1EAEDB;
+  border-color: #1EAEDB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(51,195,240,0.3);
+}
+
+/* Подвал */
+.footer {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: #a0aec0;
+  padding: 30px 0;
+  margin-top: 30px;
+  border-top: 4px solid #33C3F0;
+}
+
+.footer p {
+  color: #a0aec0;
+  font-size: 1.3rem;
+}
+
+.footer label {
+  color: #e2e8f0;
+  font-weight: 400;
+}
+
+.footer input[type="email"] {
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #ffffff;
+}
+
+.footer input[type="email"]:focus {
+  border-color: #33C3F0;
+  background-color: rgba(255,255,255,0.15);
+}
+
+.footer input[type="email"]::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.footer .button-primary {
+  background-color: #33C3F0;
+  border-color: #33C3F0;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.footer .button-primary:hover {
+  background-color: #1EAEDB;
+  border-color: #1EAEDB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(51,195,240,0.3);
+}
+
 /* стили для ширины 400 пикселов и выше */
 @media (min-width: 400px) {
  
 }
 
-/* стили для ширины крупнее фаблетов */
 /* стили для ширины 550 пикселов и выше */
 @media (min-width: 550px) {
-
+  .header {
+    padding: 40px 0 50px 0;
+  }
+  
+  .logo {
+    font-size: 2.2rem;
+    padding: 10px 22px;
+  }
+  
+  .nav .button {
+    width: auto;
+    padding: 0 25px;
+  }
+  
+  h1 {
+    font-size: 5rem;
+  }
+  
+  h2 {
+    font-size: 4.2rem;
+  }
 }
-
-/* стили для ширины крупнее планшетов */
 
 /* стили для ширины 750 пикселов и выше */
 @media (min-width: 750px) {
+  .logo {
+    font-size: 3rem;
+    padding: 12px 28px;
+  }
   
+  .header {
+    padding: 50px 0 60px 0;
+  }
 }
 
-/* стили для ширины крупнее компьютерных мониторов */
 /* стили для ширины 1000 пикселов и выше */
 @media (min-width: 1000px) {
+  .header {
+    padding: 60px 0 70px 0;
+  }
   
+  h1 {
+    font-size: 5.6rem;
+  }
+  
+  h2 {
+    font-size: 4.8rem;
+  }
 }
 
-/* стили для ширины крупнее компьютерных HD-мониторов */
 /* стили для ширины 1200 пикселов и выше */
 @media (min-width: 1200px) {
-
+  .header {
+    padding: 70px 0 80px 0;
+  }
 }
