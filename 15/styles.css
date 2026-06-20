@@ -43,124 +43,354 @@ table {
 }
 
 body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
+	font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	background: #f0f4f8;
+	color: #2d3748;
 }
 
-
+/* Шапка */
 header {
-	background-color:rgb(93,43,78); 
-	background-image: linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
-	padding-bottom: 30px;
+	background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+	padding-bottom: 20px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 header h1 {
-	font-size: 3em;	
-	color: white;
-	font-weight: bold;
-	padding-top: 30px;
+	font-size: 2.8em;
+	color: #ffffff;
+	font-weight: 300;
+	padding-top: 25px;
 	clear: both;
-	padding-left: 10px;
+	padding-left: 15px;
+	letter-spacing: 2px;
+	text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
+/* Навигация */
 nav {
-	background-color: rgb(25,25,25);
-	border: 1px solid rgba(255,255,255,.5);	
-	border-left: none;
-	border-right: none;
+	background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+	border-bottom: 3px solid #4299e1;
 }
+
 nav ul {
 	padding: 0;
-	margin: 0;	
+	margin: 0;
 }
+
 nav li {
 	float: left;
 	padding: 0;
 	margin: 0;
-	list-style: none;	
+	list-style: none;
 }
+
 nav a {
 	float: left;
-	font-size: .8em;	
-	color: white;
-	font-weight: normal;
+	font-size: 0.85em;
+	color: #e2e8f0;
+	font-weight: 500;
 	text-decoration: none;
-	padding: 10px;
-	border-right: 1px dashed rgba(255,255,255,.75);
-	transition: all .5s;
+	padding: 14px 22px;
+	border-right: 1px solid rgba(255,255,255,0.06);
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
+
 nav li:last-of-type a {
-	border-right: none;	
+	border-right: none;
 }
+
 nav a:hover {
-	background-color: rgb(93,43,78);
+	background: #4299e1;
+	color: #ffffff;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(66,153,225,0.3);
 }
+
+/* Боковые панели */
+aside {
+	background: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+	padding: 18px 22px;
+	transition: box-shadow 0.3s ease;
+}
+
+aside:hover {
+	box-shadow: 0 6px 25px rgba(0,0,0,0.10);
+}
+
 aside h2 {
 	font-size: 1.3em;
-	margin-top: 10px;	
+	margin-top: 0;
+	color: #1a365d;
+	font-weight: 600;
+	border-bottom: 3px solid #4299e1;
+	padding-bottom: 10px;
+	margin-bottom: 14px;
 }
+
 aside h3 {
-	font-size: 1.1em;
-	margin-top: 15px;
+	font-size: 1.05em;
+	margin-top: 16px;
+	color: #2b6cb0;
+	font-weight: 600;
 }
-aside p, aside li {
-	font-size: .75em;
-	margin-top: 10px;	
+
+aside p {
+	font-size: 0.85em;
+	margin-top: 8px;
+	color: #4a5568;
+	line-height: 1.7;
 }
+
+aside ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+aside ul li {
+	font-size: 0.85em;
+	padding: 8px 0 8px 18px;
+	border-bottom: 1px solid #f0f4f8;
+	color: #4a5568;
+	position: relative;
+}
+
+aside ul li:before {
+	content: "▸";
+	position: absolute;
+	left: 0;
+	color: #4299e1;
+	font-weight: bold;
+}
+
+aside ul li:last-child {
+	border-bottom: none;
+}
+
+aside ul li:hover {
+	color: #2b6cb0;
+	padding-left: 22px;
+	transition: all 0.2s ease;
+}
+
+/* Основной контент */
+.main {
+	background: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+	padding: 18px 25px 25px 25px;
+	transition: box-shadow 0.3s ease;
+}
+
+.main:hover {
+	box-shadow: 0 6px 25px rgba(0,0,0,0.10);
+}
+
 .main h2 {
 	font-size: 2em;
-	margin-top: 10px;	
+	margin-top: 0;
+	color: #1a365d;
+	font-weight: 700;
 }
+
 .main h3 {
-	font-size: 1.5em;
-	margin-top: 20px;	
+	font-size: 1.4em;
+	margin-top: 22px;
+	color: #2b6cb0;
+	font-weight: 600;
 }
+
 .main p {
-	margin-bottom: 15px;	
+	margin-bottom: 16px;
+	line-height: 1.8;
+	color: #4a5568;
 }
+
+/* Подвал */
 footer {
-	margin-top: 15px;
-	font-size: .8em;	
-	padding: 10px 10px 30px 10px;
-	background-color: black;
-	color: rgb(204,204,204);
+	margin-top: 25px;
+	font-size: 0.8em;
+	padding: 22px 25px 30px 25px;
+	background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+	color: #a0aec0;
+	border-top: 3px solid #4299e1;
+	border-radius: 0 0 10px 10px;
 }
+
 footer a {
-	color: white;	
+	color: #63b3ed;
+	text-decoration: none;
+	transition: color 0.2s ease;
 }
-/* пользовательские стили  */
 
-/* раскомментируйте этот стиль, если хотите всю страницу, включая фоновый цвет, ограничить центрированным блоком размером 1200 пикселов  */
-/*.pageWrapper {
-	max-width: 1200px;
-	margin: 0 auto;	
-}*/
+footer a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
 
+/* ============================================================
+   СТИЛИ ИЗ ПРАКТИКУМА
+   ============================================================ */
+
+.columnWrapper {
+	float: left;
+	width: 80%;
+}
 
 .sidebar1 {
-  float: left;
-  width: 20%;
-  padding: 0 20px 0 10px;
+	float: left;
+	width: 25%;
+	padding: 0 18px 0 0;
 }
+
 .main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-  border-left: dashed 1px rgb(153,153,153);
-  border-right: dashed 1px rgb(153,153,153);
+	float: right;
+	width: 75%;
+	padding: 0 18px 0 18px;
+	border-left: 2px solid #e2e8f0;
+	border-right: 2px solid #e2e8f0;
 }
+
 .sidebar2 {
-  float: right;
-  width: 20%; 
-  padding: 0 10px 0 20px;
+	float: right;
+	width: 20%;
+	padding: 0 0 0 18px;
 }
+
 footer {
-  clear: both;  
+	clear: both;
 }
+
 nav ul, header h1, footer p, .contentWrapper {
-  max-width: 1200px;
-  margin: 0 auto; 
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
+.contentWrapper {
+	padding: 0 10px;
+	overflow: hidden;
+}
 
+.pageWrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px 15px 10px 15px;
+}
 
+/* Адаптивные изображения */
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 6px;
+}
 
+img.half {
+	max-width: 50%;
+}
+
+img.left {
+	float: left;
+	margin: 0 15px 10px 0;
+}
+
+img.right {
+	float: right;
+	margin: 0 0 10px 15px;
+}
+
+/* Медиазапрос для планшетов */
+@media (min-width: 481px) and (max-width: 768px) {
+	.sidebar2 {
+		float: none;
+		width: auto;
+		clear: both;
+		border-top: 2px solid #e2e8f0;
+		padding-top: 15px;
+		margin-top: 10px;
+	}
+	
+	.columnWrapper {
+		width: auto;
+	}
+	
+	.main {
+		border-right: none;
+	}
+}
+
+/* Медиазапрос для смартфонов */
+@media (max-width: 480px) {
+	.columnWrapper, .main, .sidebar1, .sidebar2 {
+		float: none;
+		width: auto;
+	}
+	
+	.main {
+		border: none;
+		padding: 15px;
+	}
+	
+	.sidebar1, .sidebar2 {
+		border-top: 2px solid #e2e8f0;
+		margin-top: 20px;
+		padding-top: 15px;
+	}
+	
+	header h1 {
+		font-size: 1.8em;
+		padding-top: 15px;
+		padding-left: 10px;
+	}
+	
+	nav {
+		text-align: center;
+		border-bottom: 2px solid #4299e1;
+	}
+	
+	nav li {
+		float: none;
+		display: inline-block;
+	}
+	
+	nav a {
+		float: none;
+		display: inline-block;
+		border: none;
+		padding: 10px 12px;
+		font-size: 0.75em;
+	}
+	
+	.contentWrapper {
+		padding: 0 5px;
+	}
+	
+	.pageWrapper {
+		padding: 10px;
+	}
+	
+	img.half {
+		max-width: 100%;
+		float: none;
+		margin: 0 0 10px 0;
+	}
+	
+	img.left, img.right {
+		float: none;
+		margin: 0 0 10px 0;
+	}
+	
+	aside {
+		padding: 12px 15px;
+	}
+	
+	.main h2 {
+		font-size: 1.5em;
+	}
+	
+	.main h3 {
+		font-size: 1.2em;
+	}
+}
